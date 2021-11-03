@@ -1,0 +1,36 @@
+{
+  "name": "mini-vue3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "standard src/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ueumd/mini-vue3.git"
+  },
+  "keywords": [
+    "vue3"
+  ],
+  "author": "ueumd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ueumd/mini-vue3/issues"
+  },
+  "homepage": "https://github.com/ueumd/mini-vue3#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.1.0",
+    "eslint-config-alloy": "^4.4.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "eslint-plugin-standard": "^5.0.0",
+    "standard": "^16.0.4",
+    "vue": "^3.2.16",
+    "vue-next": "0.0.1"
+  }
+}
