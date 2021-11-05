@@ -6,15 +6,19 @@
 </head>
 <body>
 <div>
+  <div>count: <span id="myCount">{{ count }}</span></div>
   <div>msg: <span id="msgBox">{{ msg }}</span></div>
   <div>vue: <span id="vueBox">{{ lang.vue }}</span></div>
 
+  <button id="setCount">修改count值</button>
   <button id="updateMsgValueBtn">修改msg值</button>
   <button id="setVue">修改Vue的值</button>
 </div>
 
 <script type="module">
-  import { effect, reactive } from '../index.js'
+  import { effect, reactive, ref } from '../index.js'
+
+  let count = (window.count = ref(100))
 
   const state = reactive({
     msg: Date.now(),
@@ -24,6 +28,11 @@
   })
 
   window.state = state
+
+  effect(() => {
+    // console.log('count:', count.value)
+    myCount.innerText = count.value
+  })
 
   // 默认执行一次
   effect(() => {
@@ -42,6 +51,10 @@
   // 点击触发数据更新
   setVue.onclick = function () {
     state.lang.vue = 'vue-next ' + Date.now()
+  }
+
+  setCount.onclick = function () {
+    count.value = Date.now()
   }
 
 </script>
